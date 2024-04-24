@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <application
         android:allowBackup="true"
@@ -10,7 +12,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProjectCollection"
-        tools:targetApi="31">
+        tools:targetApi="33">
+        <activity
+            android:name=".Menu"
+            android:exported="false"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+
+
+            />
+        <activity
+            android:name=".passingintents.PassingIntentsExercise2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:exported="false" />
         <activity
             android:name=".Connect3"
             android:exported="false" />
@@ -22,7 +37,9 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:configChanges="screenLayout|screenSize"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

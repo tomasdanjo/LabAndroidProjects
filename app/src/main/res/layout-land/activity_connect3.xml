@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Connect3">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="1"
 
             >
             <TextView
@@ -25,13 +24,394 @@
                 android:layout_height="wrap_content"
                 android:text="Player turn"
                 android:textAlignment="center"
-                android:textSize="20pt"
+                android:textSize="14pt"
                 android:id="@+id/playerTurn"
-                android:layout_weight="1"
-
                 >
 
             </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c1r1"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c2r1"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c3r1"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c4r1"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c5r1"
+                        >
+                    </Button>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c1r2"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c2r2"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c3r2"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c4r2"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c5r2"
+                        >
+                    </Button>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c1r3"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c2r3"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c3r3"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c4r3"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c5r3"
+                        >
+                    </Button>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c1r4"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c2r4"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c3r4"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c4r4"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c5r4"
+                        >
+                    </Button>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c1r5"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c2r5"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c3r5"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c4r5"
+
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        app:cornerRadius="50mm"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="1dp"
+                        android:padding="10dp"
+                        android:id="@+id/c5r5"
+                        >
+                    </Button>
+
+                </LinearLayout>
+            </LinearLayout>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,389 +426,7 @@
 
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_gravity="center"
-            >
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
 
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c1r1"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c2r1"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c3r1"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c4r1"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c5r1"
-                    >
-                </Button>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c1r2"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c2r2"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c3r2"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c4r2"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c5r2"
-                    >
-                </Button>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c1r3"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c2r3"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c3r3"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c4r3"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c5r3"
-                    >
-                </Button>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c1r4"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c2r4"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c3r4"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c4r4"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c5r4"
-                    >
-                </Button>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                >
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c1r5"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c2r5"
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c3r5"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c4r5"
-
-                    >
-                </Button>
-
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:backgroundTint="@color/white"
-                    app:cornerRadius="50mm"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="1dp"
-                    android:padding="10dp"
-                    android:id="@+id/c5r5"
-                    >
-                </Button>
-
-            </LinearLayout>
-        </LinearLayout>
 
 
 

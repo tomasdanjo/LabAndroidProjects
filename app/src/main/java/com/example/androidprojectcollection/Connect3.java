@@ -1,7 +1,5 @@
 package com.example.androidprojectcollection;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -9,24 +7,28 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
 
 public class Connect3 extends AppCompatActivity {
     int player;
+    int[][] colorState = {
+            {0,0,0,0,0},
+            {0,0,0,0,0},
+            {0,0,0,0,0},
+            {0,0,0,0,0},
+            {0,0,0,0,0}
+    };
+    String text;
+    boolean disable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connect3);
-
-        String text = "Thomas Danjo Manulat | Connect 3";
-        Toast toast = Toast.makeText(this,text,Toast.LENGTH_SHORT);
-        toast.show();
-
         Random rand = new Random();
-        player = rand.nextInt(2)+1;
-        TextView playerLabel = (TextView) findViewById(R.id.playerTurn);
-        playerLabel.setText("Player "+player+"'s turn");
+
+        setContentView(R.layout.activity_connect3);
 
         Button c1r1 = (Button) findViewById(R.id.c1r1);
         Button c2r1 = (Button) findViewById(R.id.c2r1);
@@ -66,13 +68,50 @@ public class Connect3 extends AppCompatActivity {
                 {c1r5,c2r5,c3r5,c4r5,c5r5}
         };
 
-        int[][] colorState = {
-                {0,0,0,0,0},
-                {0,0,0,0,0},
-                {0,0,0,0,0},
-                {0,0,0,0,0},
-                {0,0,0,0,0}
-        };
+
+        if(savedInstanceState!=null){
+            super.onRestoreInstanceState(savedInstanceState);
+
+            // Restore colorState array
+            for (int i = 0; i < 5; i++) {
+                colorState[i] = savedInstanceState.getIntArray("colorstate" + i);
+            }
+            // Restore player variable
+            player = savedInstanceState.getInt("player");
+            text = savedInstanceState.getString("header_text");
+            disable = savedInstanceState.getBoolean("disable_btn");
+            if(disable){
+                disableBtns(btns);
+
+            }else{
+                enableBtns(btns);
+            }
+
+
+        }else{
+            player = rand.nextInt(2)+1;
+            text = "Player "+player+"'s turn";
+        }
+
+
+
+
+        String texttoast = "Thomas Danjo Manulat | Connect 3";
+        Toast toast = Toast.makeText(this,texttoast,Toast.LENGTH_SHORT);
+        toast.show();
+
+
+        TextView playerLabel = (TextView) findViewById(R.id.playerTurn);
+        playerLabel.setText(text);
+
+        if(player==1){
+            playerLabel.setTextColor(Color.BLACK);
+        }else{
+            playerLabel.setTextColor(Color.RED);
+        }
+
+
+
 
         refreshColor(colorState,btns);
 
@@ -90,6 +129,7 @@ public class Connect3 extends AppCompatActivity {
                         }
                     }
                     refreshColor(colorState,btns);
+
                     if(columnisfull){
                         Toast toast = Toast.makeText(Connect3.this,"Select another column",Toast.LENGTH_SHORT);
                         toast.show();
@@ -98,16 +138,27 @@ public class Connect3 extends AppCompatActivity {
 
                         if(winner(colorState)==-1){
                             player = (player==1)?2:1;
-                            playerLabel.setText("Player "+player+"'s turn");
+                            text = "Player "+player+"'s turn";
+                            playerLabel.setText(text);
+                            if(player==1){
+                                playerLabel.setTextColor(Color.BLACK);
+                            }else{
+
+                                playerLabel.setTextColor(Color.RED);
+                            }
                         }else if(winner(colorState)==0){
                             //tie
-                            playerLabel.setText("Tie");
+                            text = "Tie";
+                            playerLabel.setText(text);
                             //disable buttons
                             disableBtns(btns);
+                            disable = true;
                         }else{
-                            playerLabel.setText("Player "+winner(colorState)+" won!");
+                            text = "Player "+winner(colorState)+" won!";
+                            playerLabel.setText(text);
                             //disable buttons
                             disableBtns(btns);
+                            disable = true;
                         }
 
                     }
@@ -129,70 +180,104 @@ public class Connect3 extends AppCompatActivity {
                 }
                 refreshColor(colorState,btns);
                 enableBtns(btns);
-
+                disable = false;
                 player = rand.nextInt(2)+1;
                 playerLabel.setText("Player "+player+"'s turn");
+                if(player==1){
+                    playerLabel.setTextColor(Color.BLACK);
+                }else{
+
+                    playerLabel.setTextColor(Color.RED);
+                }
             }
         });
 
+    }
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
 
+        // Save colorState array
+        for (int i = 0; i < 5; i++) {
+            savedInstanceState.putIntArray("colorstate" + i, colorState[i]);
+        }
+        // Save player variable
+        savedInstanceState.putInt("player", player);
+        savedInstanceState.putString("header_text",text);
+        savedInstanceState.putBoolean("disable_btn", disable);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Restore colorState array
+        for (int i = 0; i < 5; i++) {
+            colorState[i] = savedInstanceState.getIntArray("colorstate" + i);
+        }
+        // Restore player variable
+        player = savedInstanceState.getInt("player");
     }
 
     public void enableBtns(Button[][] btns){
         for(int i=0;i< btns.length;i++){
-            for(int j=0;j<btns[i].length;j++){
-                btns[i][j].setEnabled(true);
-            }
+            btns[0][i].setEnabled(true);
+
         }
     }
 
     public void disableBtns(Button[][] btns){
         for(int i=0;i< btns.length;i++){
-            for(int j=0;j<btns[i].length;j++){
-                btns[i][j].setEnabled(false);
-            }
+            btns[0][i].setEnabled(false);
         }
     }
 
-    public int winner(int[][] colorstate){
+    public int winner(int[][] colorState){
         //check for horizontal
-        for(int i=0;i<colorstate.length;i++){
-            for(int j=0;j<colorstate[i].length-2;j++){
-                if(colorstate[i][j]!=0 && colorstate[i][j]==colorstate[i][j+1] &&  colorstate[i][j]==colorstate[i][j+2]){
-                    return colorstate[i][j];
+        int rows = colorState.length;
+        int cols = colorState[0].length;
+
+        // Check rows
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols - 2; j++) {
+                if (colorState[i][j]!=0 && colorState[i][j] == colorState[i][j+1] && colorState[i][j] == colorState[i][j+2]) {
+                    return colorState[i][j];
                 }
             }
         }
 
-        for(int i=0;i<colorstate.length-2;i++){
-            for(int j=0;j<colorstate[i].length;j++){
-                if(colorstate[i][j]!=0 && colorstate[i][j]==colorstate[i+1][j] &&  colorstate[i][j]==colorstate[i+2][j]){
-                    return colorstate[i][j];
+        // Check columns
+        for (int j = 0; j < cols; j++) {
+            for (int i = 0; i < rows - 2; i++) {
+                if (colorState[i][j]!=0 && colorState[i][j] == colorState[i+1][j] && colorState[i][j] == colorState[i+2][j]) {
+                    return colorState[i][j];
                 }
             }
         }
 
-        for(int i=2;i<colorstate.length;i++){
-            for(int j=0;j<colorstate[i].length-2;j++){
-                if(colorstate[i][j]!=0 && colorstate[i][j]==colorstate[i-1][j+1] &&  colorstate[i][j]==colorstate[i-2][j+2]){
-                    return colorstate[i][j];
+        // Check diagonals
+        for (int i = 0; i < rows - 2; i++) {
+            for (int j = 0; j < cols - 2; j++) {
+                if (colorState[i][j]!=0 && colorState[i][j] == colorState[i+1][j+1] && colorState[i][j] == colorState[i+2][j+2]) {
+                    return colorState[i][j];
                 }
             }
         }
 
-        for(int i=0;i<colorstate.length-2;i++){
-            for(int j=0;j<colorstate[i].length-2;j++){
-                if(colorstate[i][j]!=0 && colorstate[i][j]==colorstate[i+2][j+2] &&  colorstate[i][j]==colorstate[i+1][j+1]){
-                    return colorstate[i][j];
+        // Check reverse diagonals
+        for (int i = 0; i < rows - 2; i++) {
+            for (int j = 2; j < cols; j++) {
+                if (colorState[i][j]!=0 && colorState[i][j] == colorState[i+1][j-1] && colorState[i][j] == colorState[i+2][j-2]) {
+                    return colorState[i][j];
                 }
             }
         }
 
         boolean istie = true;
 
-        for(int i=0;i<colorstate.length;i++){
-            for(int j=0;j<colorstate[i].length;j++){
-                if(colorstate[i][j]==0){
+        for(int i=0;i<colorState.length;i++){
+            for(int j=0;j<colorState[i].length;j++){
+                if(colorState[i][j]==0){
                     istie = false;
                 }
             }

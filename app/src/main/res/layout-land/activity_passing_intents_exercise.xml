@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".passingintents.PassingIntentsExercise"
+    android:padding="10dp"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Registration Form"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complete Name"
+                >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/fname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="First Name"
+
+                    android:inputType="text" />
+                <EditText
+                    android:id="@+id/lname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="Last Name" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                >
+            </TextView>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/rgGender"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="10dp"
+                    >
+                </RadioButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    >
+                </TextView>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginRight="10dp"
+                    >
+                </RadioButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    >
+                </TextView>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="10dp"
+                    >
+                </RadioButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others"
+                    >
+                </TextView>
+
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Birth Date"
+                            >
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txtBdate"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="date"
+                            android:layout_marginEnd="100dp"
+                            >
+                        </EditText>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Email Address"
+                            >
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txtEmail"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:layout_marginEnd="100dp"
+                            >
+                        </EditText>
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Address"
+                            >
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txtAddress"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginEnd="100dp"
+                            >
+                        </EditText>
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Year level"
+                            >
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txtYearLevel"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+
+                            android:layout_marginEnd="100dp"
+                            >
+                        </EditText>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Phone Number"
+                            >
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txtPhone"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            >
+                        </EditText>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Student ID"
+                            >
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txtStudentID"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            >
+                        </EditText>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Program"
+                            >
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txtProgram"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            >
+                        </EditText>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Semester"
+                            >
+
+                        </TextView>
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/rgSem"
+                            >
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="10dp"
+                                >
+
+                            </RadioButton>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1st"
+                                >
+                            </TextView>
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="10dp">
+
+
+                            </RadioButton>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2nd"
+                                >
+                            </TextView>
+
+
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginEnd="10dp"
+                                >
+
+                            </RadioButton>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Summer"
+                                >
+                            </TextView>
+
+
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:layout_margin="10dp"
+                    >
+
+                </Button>
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+
+                    android:layout_margin="10dp"
+                    >
+
+                </Button>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

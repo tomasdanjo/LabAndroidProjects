@@ -1,12 +1,13 @@
 package com.example.androidprojectcollection;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.androidprojectcollection.passingintents.PassingIntentsExercise;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -59,6 +60,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button passingIntents = (Button) findViewById(R.id.passingIntents);
+        passingIntents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, PassingIntentsExercise.class);
+                startActivity(i);
+            }
+        });
+
+        Button menu = (Button) findViewById(R.id.menuActivity);
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent (MainActivity.this,Menu.class);
+                startActivity(i);
+            }
+        });
 
     }
 }
